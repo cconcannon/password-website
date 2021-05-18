@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Password-Protected Static Site</title>
+    <meta name="description" content="Password-protected website">
+    <meta name="author" content="Chris Concannon">
+</head>
+
+<body>
+    <div style="width: 100vw"></div>
+    <h1 style="text-align: center;">This site is password-protected!</h1>
+    <br />
+    <p>
+        Linking to paths in a static site is not possible when S3 is configured to serve static sites, because it only translates requests to `/index.html` for the root folder. My Lambda function, however, uses the npm `path` library to translate all path requests to their proper sub-folder assets.
+    </p>
+    <a style="text-align: center;" href="https://password.concannon.tech/path">Sub-folder link to https://password.concannon.tech/path</a>
+</body>
+
+</html>
