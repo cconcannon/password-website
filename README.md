@@ -2,6 +2,8 @@
 
 View a working demo that uses these exact files at https://password.concannon.tech
 
+Read a little bit more about this solution at my blog post: https://blog.concannon.tech/tech-talk/basic-password-protection/
+
 Username: `password`
 Password: `concannon.tech`
 
@@ -20,6 +22,8 @@ My solution is every bit as scalable and reliable as Cloudflare's and Netlify's,
 This solution uses AWS, so you must have a valid AWS account. It may be possible to build a similar solution on other cloud providers so long as you can run code at the edge and write custom responses. The pattern can be re-used outside of AWS.
 
 ## Description
+
+![](./serverless-basic-auth.png)
 
 In planning for my wedding, I built a custom (static) website. I didn't want it to be public for a variety of reasons, and I also didn't want to manage a server or integrate an identity provider to handle authentication logic. After spending hours (days, weeks, months maybe) scouring the internet for a free way to password-protect a static website, **I think I came up with the simplest solution possible**. Updates to the site are as simple as building the site locally (or via a GitHub Action) and copying the static build to an S3 bucket.
 
